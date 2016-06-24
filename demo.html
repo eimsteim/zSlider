@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zSlider Demo</title>
+	<script type="text/javascript" src="jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="jquery.zSlider.js"></script>
+
+    <style type="text/css">
+    #comNetUl {
+        margin: 0;
+        padding: 0;
+    }
+
+    #comNetUl li{
+        /*float:left;*/
+        margin-right:20px;
+        /*margin-bottom:20px;*/
+        width: 100%;
+        overflow: hidden;
+        vertical-align: middle;
+        background: #fff;
+        height: 70px;
+    }
+
+    #comNetUl li div {
+        display: inline-block;
+        *display: inline;
+        *margin-left: 5px;
+        zoom: 1;
+        border: 1px solid #d3d3d3;
+    }
+
+    #comNetUl li img{
+        margin: 5px;
+        width: 128px;
+        height: 48px;
+    }
+
+
+    .dotswrapper {
+        margin-bottom: 10px;
+    }
+
+    .dots {
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .dots .dot {
+        font-size: 0;
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        margin: 0 3px;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid #999;
+    }
+    .dots .dot.active{
+        background-color: #999;
+    }
+
+    </style>
+
+</head>
+<body>
+    <!-- dot wrapper -->
+    <div class="dotswrapper"></div>
+
+    <!-- main slider -->
+	<div id="demo_slider" style="width: 100%; height: 70px; overflow: hidden;">
+		<ul id="comNetUl" class="clearfix">
+            <!-- hor -->
+            <li class="z_gl_hd active">
+                <div><img src="images/baidu.png" /></div>
+                <div><img src="images/yqf.gif" /></div>
+                <div><img src="images/fanli51.gif" /></div>
+                <div><img src="images/lkt.gif" /></div>
+                <div><img src="images/dm.gif" /></div>
+                <div><img src="images/sougou.png" /></div>
+                <div><img src="images/ff.png" /></div>
+                <div><img src="images/uc.png" /></div>
+            </li>
+            <li>
+                <div><img src="images/lpyd.png" /></div>
+                <div><img src="images/bigou.png" /></div>
+                <div><img src="images/smzdm.gif" /></div>
+                <div><img src="images/huihui.png" /></div>
+                <div><img src="images/zhitui.png" /></div>
+                <div><img src="images/aili.png" /></div>
+                <div><img src="images/aofei.png" /></div>
+                <div><img src="images/wcc.png" /></div>
+            </li>
+            <li>
+                <div><img src="images/lpyd.png" /></div>
+                <div><img src="images/bigou.png" /></div>
+                <div><img src="images/smzdm.gif" /></div>
+                <div><img src="images/huihui.png" /></div>
+                <div><img src="images/zhitui.png" /></div>
+                <div><img src="images/aili.png" /></div>
+                <div><img src="images/aofei.png" /></div>
+                <div><img src="images/wcc.png" /></div>
+            </li>
+            <li>
+                <div><img src="images/lpyd.png" /></div>
+                <div><img src="images/bigou.png" /></div>
+                <div><img src="images/smzdm.gif" /></div>
+                <div><img src="images/huihui.png" /></div>
+                <div><img src="images/zhitui.png" /></div>
+                <div><img src="images/aili.png" /></div>
+                <div><img src="images/aofei.png" /></div>
+                <div><img src="images/wcc.png" /></div>
+            </li>
+            <li>
+                <div><img src="images/lpyd.png" /></div>
+                <div><img src="images/bigou.png" /></div>
+                <div><img src="images/smzdm.gif" /></div>
+                <div><img src="images/huihui.png" /></div>
+                <div><img src="images/zhitui.png" /></div>
+                <div><img src="images/aili.png" /></div>
+                <div><img src="images/aofei.png" /></div>
+                <div><img src="images/wcc.png" /></div>
+            </li>
+        </ul>
+	</div>
+
+
+<script type="text/javascript">
+    $(function(){
+        $('#demo_slider').zSlider({
+            dotswrapper: '.dotswrapper'
+        });
+    });
+    
+</script>
+</body>
+</html>
