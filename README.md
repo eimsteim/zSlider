@@ -33,4 +33,4 @@ demo.html中提供了范例的CSS样式，并将其尽量精简，以避免与�
 
 附上最终效果图：
 
-![](http://7xo8xv.com1.z0.glb.clouddn.com/zSlider-1.gif)
+![](http://7xo8xv.com1.z0.glb.clouddn.com/2016-06-24_15-11-18.gif)
