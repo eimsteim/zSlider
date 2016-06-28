@@ -22,6 +22,7 @@ demo.html中提供了范例的CSS样式，并将其尽量精简，以避免与�
 <script type="text/javascript">
     $(function(){
         $('#demo_slider').zSlider({
+        	align: 'horizontal',				//可选：vertical - 垂直切换（默认），horizontal - 水平切换
             delay: 3000,                        //切换间隔时间
             dotswrapper: '.dotswrapper'         //INDEX角标容器的标识
         });
@@ -29,7 +30,7 @@ demo.html中提供了范例的CSS样式，并将其尽量精简，以避免与�
 </script>
 ```
 
-> 目前仅支持基本的纵向滑动，且并没有实现无限循环，后续会不会实现……有时间，看心情 >__<
+> 目前没有实现无限循环，后续会不会实现……有时间，看心情 >__<
 
 附上最终效果图：
 
