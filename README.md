@@ -33,7 +33,7 @@ demo.html中提供了范例的CSS样式，并将其尽量精简，以避免与�
 3.定义dots样式时需要注意：
 
 * wrapper最好以ID检索
-* 必须在wrapper下定义.dots , .dots .dot 和 .dots .dot.active三种样式，分别表示了<ol>的样式，<li>的样式，以及<li>激活时的样式
+* 必须在wrapper下定义.dots , .dots .dot 和 .dots .dot.active三种样式，分别表示了ol的样式，li的样式，以及li激活时的样式
 * 上述2中的3种样式，最好按照如下所示的方式定义在wrapper之下，这样可以保证在同一个页面上多次使用zSlider时，不会出现冲突
 
 4.真实开发场景中，每个页面都会有自己特定的风格，因此zSlider只负责处理滚动事件，而不生成任何UI（例如dots的样式）。
