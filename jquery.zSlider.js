@@ -27,8 +27,17 @@
             child_size = $(ul).children('li').length,
             autoPlay;
 
+        /**** 更新dots ****/
+        var updateDots = function(tar_index) {
 
+            if(settings.dotswrapper){
+                var dots = $(settings.dotswrapper).find('.dots');
+                $(dots).find('li.active').removeClass('active');
+                $($(dots).children('li').get(tar_index)).addClass('active');
+            }
+        }
 
+        /**** 滚动到指定target ****/
 		var scrollTo = function(target) {
 			//fresh li's active status
             var curr = $(ul).find('li.active'); $(curr).removeClass('active');
@@ -58,12 +67,7 @@
                     'left': -100 * tar_index + '%'
                 },500,function(){
                     //update dots
-                    if(settings.dotswrapper){
-                        var dots = $(settings.dotswrapper).find('.dots');
-                        $(dots).find('li.active').removeClass('active');
-                        $($(dots).children('li').get(tar_index)).addClass('active');
-                    }
-
+                    updateDots(tar_index);
                 });
 
             } else { //vertical
@@ -71,12 +75,7 @@
                     'margin-top':-liH * tar_index +'px'
                 },500,function(){
                     //update dots
-                    if(settings.dotswrapper){
-                        var dots = $(settings.dotswrapper).find('.dots');
-                        $(dots).find('li.active').removeClass('active');
-                        $($(dots).children('li').get(tar_index)).addClass('active');
-                    }
-
+                    updateDots(tar_index);
                 });
             }
 		}
@@ -91,7 +90,7 @@
 
         //init dots
         if(settings.dotswrapper){
-
+        	
             $(settings.dotswrapper).append('<ol class="dots"></ol>');
             var dots = $(settings.dotswrapper).find('.dots');
 
@@ -113,7 +112,6 @@
             });
         }
 		
-
 
 		return this;
 	}

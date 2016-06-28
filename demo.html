@@ -7,12 +7,12 @@
 	<script type="text/javascript" src="jquery.zSlider.js"></script>
 
     <style type="text/css">
-    #comNetUl {
+    #zslider-ul {
         margin: 0;
         padding: 0;
     }
 
-    #comNetUl li{
+    #zslider-ul li{
         /*float:left;*/
         margin-right:20px;
         /*margin-bottom:20px;*/
@@ -23,7 +23,7 @@
         height: 70px;
     }
 
-    #comNetUl li div {
+    #zslider-ul li div {
         display: inline-block;
         *display: inline;
         *margin-left: 5px;
@@ -31,23 +31,27 @@
         border: 1px solid #d3d3d3;
     }
 
-    #comNetUl li img{
+    #zslider-ul li img{
         margin: 5px;
         width: 128px;
         height: 48px;
     }
 
-
-    .dotswrapper {
+    /**** 定义dots样式时需要注意：
+        * 1.wrapper最好以ID检索
+        * 2.必须在wrapper下定义.dots , .dots .dot 和 .dots .dot.active三种样式，分别表示了<ol>的样式，<li>的样式，以及<li>激活时的样式
+        * 3.上述2中的3种样式，最好按照如下所示的方式定义在wrapper之下，这样可以保证在同一个页面上多次使用zSlider时，不会出现冲突
+     ****/
+    #dotswrapper {
         margin-bottom: 10px;
     }
 
-    .dots {
+    #dotswrapper>.dots {
         width: auto;
         padding: 0;
         margin: 0;
     }
-    .dots .dot {
+    #dotswrapper>.dots .dot {
         font-size: 0;
         width: 8px;
         height: 8px;
@@ -60,7 +64,7 @@
         background-color: #fff;
         border: 1px solid #999;
     }
-    .dots .dot.active{
+    #dotswrapper>.dots .dot.active{
         background-color: #999;
     }
 
@@ -69,11 +73,11 @@
 </head>
 <body>
     <!-- dot wrapper -->
-    <div class="dotswrapper"></div>
+    <div id="dotswrapper"></div>
 
     <!-- main slider -->
-	<div id="demo_slider" style="width: 100%; height: 70px; overflow: hidden;">
-		<ul id="comNetUl" class="clearfix">
+	<div id="zslider-wrapper" style="width: 100%; height: 70px; overflow: hidden;">
+		<ul id="zslider-ul" class="clearfix">
             <!-- hor -->
             <li class="z_gl_hd active">
                 <div><img src="images/baidu.png" /></div>
@@ -111,9 +115,10 @@
 
 <script type="text/javascript">
     $(function(){
-        $('#demo_slider').zSlider({
+        $('#zslider-wrapper').zSlider({
+            //align: 'horizontal',
             delay: 2000,                        //切换间隔时间
-            dotswrapper: '.dotswrapper'         //INDEX角标容器的标识
+            dotswrapper: '#dotswrapper'         //INDEX角标容器的标识
         });
     });
     
