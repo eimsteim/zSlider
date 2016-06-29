@@ -10,29 +10,25 @@
     #zslider-ul {
         margin: 0;
         padding: 0;
+        float: left;
     }
 
     #zslider-ul li{
-        /*float:left;*/
+        float:left;
         margin-right:20px;
-        /*margin-bottom:20px;*/
-        width: 100%;
         overflow: hidden;
         vertical-align: middle;
         background: #fff;
         height: 70px;
+        margin-right: 19px;
     }
 
     #zslider-ul li div {
-        display: inline-block;
-        *display: inline;
-        *margin-left: 5px;
-        zoom: 1;
         border: 1px solid #d3d3d3;
     }
 
     #zslider-ul li img{
-        margin: 5px;
+        /*margin: 5px;*/
         width: 128px;
         height: 48px;
     }
@@ -76,37 +72,102 @@
     <div id="dotswrapper"></div>
 
     <!-- main slider -->
-	<div id="zslider-wrapper" style="width: 100%; height: 70px; overflow: hidden;">
+	<div id="zslider-wrapper" style="width: 1200px; height: 70px; overflow: hidden;">
 		<ul id="zslider-ul" class="clearfix">
             <!-- hor -->
-            <li class="z_gl_hd active">
+            <li class="z_gl_hd">
                 <div><img src="images/baidu.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/yqf.gif" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/fanli51.gif" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/lkt.gif" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/dm.gif" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/sougou.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/ff.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/uc.png" /></div>
             </li>
-            <li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/lpyd.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/bigou.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/smzdm.gif" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/huihui.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/zhitui.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/aili.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/aofei.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/wcc.png" /></div>
             </li>
-            <li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/lpyd.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/bigou.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/smzdm.gif" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/huihui.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/zhitui.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/aili.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/aofei.png" /></div>
+            </li>
+
+            <li class="z_gl_hd">
                 <div><img src="images/wcc.png" /></div>
             </li>
         </ul>
@@ -118,7 +179,7 @@
         $('#zslider-wrapper').zSlider({
             //align: 'horizontal',
             delay: 2000,                        //切换间隔时间
-            dotswrapper: '#dotswrapper'         //INDEX角标容器的标识
+            dotsWrapper: '#dotswrapper'         //INDEX角标容器的标识
         });
     });
     
